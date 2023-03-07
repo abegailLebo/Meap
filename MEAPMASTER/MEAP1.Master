@@ -1,0 +1,136 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MEAP1.master.cs" Inherits="MEAP3._0.MEAP1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+       <%--bootstrap css --%>
+       <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+       <%--datatables css--%>
+       <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+       <%--fontawsome css --%>
+       <link href="fontawsome/css/all.css" rel="stylesheet" />
+       <%--custom css --%>
+       <link href="css/customstylesheet.css" rel="stylesheet" />
+       <%--popper js --%>
+       <script src="bootstrap/js/popper.min.js"></script>
+       <%--bootstrap js --%>
+       <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+       <link href="schedulecss.css" rel="stylesheet" />
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">  </asp:ContentPlaceHolder>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+</head>
+    <body>
+        <form id="form1" runat="server">
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light  "> 
+                     <a class ="navbar-brand" href ="homepg.aspx">
+                         <img src="images/viewtimetablegif.gif" width="60" height="60"/>
+                        <!-- MEAP-->
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                        aria-expanded="false" aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon"></span>
+                    </button>
+                 
+                           
+                
+                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav mr-auto ">
+                                     <li class="nav-item active">
+                                        <a class="nav-link" href="aboutus.aspx">About Us</a>
+                                     </li>
+
+                                     <li class="nav-item active">
+                                         <a class="nav-link" href="Contact.aspx">Contact</a>
+                                    </li>
+                                  <li class="nav-item active">
+                                         <a class="nav-link" href="Moreinfo.aspx">Videos</a>
+                                    </li>
+                                  <li class="nav-item active">
+                                         <a class="nav-link" href="Mentors.aspx">Mentors</a>
+                                    </li>
+                             </ul>
+       
+                             <ul class="navbar-nav navbar-right">
+
+                                    <li class="nav-item active">
+                                        <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server"
+                                         Visible="False">Hello User</asp:LinkButton>
+                                    <li class="nav-item active">
+                                        <asp:LinkButton class="nav-link" ID="LinkButton12" runat="server" href="schedule.aspx"
+                                         >Schedule</asp:LinkButton>
+                                   </li>
+                                    <li class="nav-item active">
+                                        <asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" href="studentProfile.aspx"
+                                         Visible="False">View Profile</asp:LinkButton>
+
+                                  <li class="nav-item active">
+                                        <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" href="sdsProfile.aspx"
+                                         Visible="False">View Profile</asp:LinkButton>  
+
+                                       <li class="nav-item active">
+                                        <asp:LinkButton class="nav-link" ID="LinkButton10" runat="server" href="viewStudents.aspx"
+                                         Visible="False">View Students</asp:LinkButton> 
+           
+                                   <li class="nav-item active">
+                                        <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" href="studentLogin.aspx"
+                                         >User Login</asp:LinkButton>
+                                   </li>
+                                   <li class="nav-item active">
+                                        <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" 
+                                         >Sign Up</asp:LinkButton>
+                                   </li>
+                                   <li class="nav-item active">
+                                        <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server"
+                                         Visible="False" OnClick="LinkButton7_Click1">Logout</asp:LinkButton>
+
+                                   </li>
+                                 
+                             </ul>
+                      </div>        
+                </nav>
+            
+         </div>
+            <div>
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+
+           <footer>
+               <div id="footer1" class="container-fluid">
+                   <div class ="row">
+                       <div  class="col-xs-12 col-sm-12 text-center">
+                           <p>
+                               <!--<asp:LinkButton CssClass="footerlinks" ID="LinkButton6" runat="server"   href ="adminlogin.aspx"
+                                   >Admin Login</asp:LinkButton>&nbsp;-->
+                               <asp:LinkButton CssClass="footerlinks" ID="LinkButton11" runat="server"  
+                                   Visable="false" OnClick="LinkButton11_Click">SDS Management</asp:LinkButton>&nbsp;
+                           </p>
+                       </div>
+                   </div>
+               </div>
+                   
+            <div id="footer2" class="container-fluid" >
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center" max-height: 20px >
+                        <p style="color:blue">&copy All right Reserved.<a
+                            class="footerlinks" href="#" target="_blank">MEAP</a></p>
+                    </div>
+                </div>
+            </div>
+        
+           
+          </footer> 
+        </form>
+    </body>
+  </html>
